@@ -4,8 +4,7 @@ const HeaderWrapper = styled.div`
     width: 100%;
     height: 80px;
     background-color: #f3f3f3;
-    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04),
-        0px 8px 16px rgba(96, 97, 112, 0.16);
+    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04);
 `;
 
 export const Header = () => {

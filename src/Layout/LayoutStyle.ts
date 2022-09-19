@@ -9,7 +9,8 @@ export const MainDiv = styled.div`
 
 export const ParentWrapper = styled.div`
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
+    height: 100vh;
 `;
 
 export const HeaderContentWrapper = styled.div`
