@@ -20,7 +20,7 @@ export const NavLinks = styled.p<{ isActive: boolean }>`
     font-size: 16px;
     color: #000;
     cursor: pointer;
-    opacity: ${(props: any) => (props.isActive === true ? 1 : 0.3)}; ;
+    opacity: ${(props: any) => (props.isActive === true ? 1 : 0.3)};
 `;
 
 export const LogoutText = styled.h5`
