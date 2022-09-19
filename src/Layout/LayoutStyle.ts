@@ -6,3 +6,13 @@ export const MainDiv = styled.div`
     padding: 0;
     margin: 0;
 `;
+
+export const ParentWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 20% 80%;
+`;
+
+export const HeaderContentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
