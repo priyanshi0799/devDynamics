@@ -5,10 +5,21 @@ import { Button } from '../../Reusables/Button';
 import { Card } from '../../Reusables/Card';
 import { LineChart } from '../../Reusables/LineChart';
 import { ParentDiv, ButtonWrapper, CardWrapper } from './OverviewStyle';
+import { useQuery } from 'react-query';
 
 export const Overview = () => {
     const [isLineActive, setIsLineActive] = useState(true);
     const [isBarActive, setIsBarActive] = useState(false);
+
+    //just a basic usage of react-query. Couldn't find an api giving relevant data, hence used dummy data
+    const dataFetching = () => {
+        console.log('fetching data....');
+    };
+
+    const { data, status } = useQuery('key', dataFetching);
+    if (status === 'loading') return <p>Loading...</p>;
+    if (status === 'error') return <p>Oops! Error</p>;
+
     const userData = {
         labels: UserData.map((data) => data.year),
         datasets: [
