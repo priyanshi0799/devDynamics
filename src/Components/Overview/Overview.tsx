@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../../Reusables/Button';
 import { Card } from '../../Reusables/Card';
+import { LineChart } from '../../Reusables/LineChart';
 import { ParentDiv, ButtonWrapper, CardWrapper } from './OverviewStyle';
 
 export const Overview = () => {
@@ -16,6 +17,32 @@ export const Overview = () => {
             setIsLineActive(false);
         }
     };
+
+    const lineData = {
+        labels: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+        ],
+        datasets: [
+            {
+                label: 'First',
+                data: [10, 20, 35, 1, 23, 89, 4, 34, 56, 11, 17],
+                backgroundColor: '#00b2ff',
+                borderColor: '#00b2ff',
+            },
+        ],
+    };
+
     return (
         <ParentDiv>
             <ButtonWrapper>
@@ -32,7 +59,9 @@ export const Overview = () => {
             </ButtonWrapper>
 
             <CardWrapper>
-                <Card>Hello</Card>
+                <Card>
+                    <LineChart data={lineData} />
+                </Card>
                 <Card>Hello</Card>
             </CardWrapper>
             <Card>Hello</Card>

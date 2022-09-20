@@ -13,7 +13,6 @@ export const ButtonWrapper = styled.div`
     align-self: flex-end;
     display: flex;
     gap: 20px;
-    width: 25%;
     padding: 15px 0px;
 `;
 
