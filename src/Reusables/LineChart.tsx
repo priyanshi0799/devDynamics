@@ -1,24 +1,7 @@
 import { Line } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    Title,
-    Tooltip,
-    LineElement,
-    Legend,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-} from 'chart.js';
+import { Chart as ChartJS, registerables } from 'chart.js';
 
-ChartJS.register(
-    Title,
-    Tooltip,
-    LineElement,
-    Legend,
-    CategoryScale,
-    LinearScale,
-    PointElement
-);
+ChartJS.register(...registerables);
 
 export const LineChart = ({ data }: { data: any }) => {
     return <Line data={data}></Line>;

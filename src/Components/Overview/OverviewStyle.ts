@@ -20,4 +20,5 @@ export const CardWrapper = styled.div`
     display: flex;
     gap: 10%;
     width: 100%;
+    margin-top: 30px;
 `;
