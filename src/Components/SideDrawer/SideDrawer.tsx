@@ -45,7 +45,14 @@ export const SideDrawer = () => {
 
     return (
         <MainDiv>
-            <h4>DevDynamics</h4>
+            <h4
+                onClick={() => {
+                    navigate('/');
+                }}
+                style={{ cursor: 'pointer' }}
+            >
+                DevDynamics
+            </h4>
             <NavlinksWrapper>
                 {route.map((ro, i) => (
                     <NavLinks
@@ -57,7 +64,13 @@ export const SideDrawer = () => {
                     </NavLinks>
                 ))}
             </NavlinksWrapper>
-            <LogoutText>Log out</LogoutText>
+            <LogoutText
+                onClick={() => {
+                    window.confirm('Are you sure you want to log out?');
+                }}
+            >
+                Log out
+            </LogoutText>
         </MainDiv>
     );
 };

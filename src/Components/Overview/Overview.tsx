@@ -20,6 +20,7 @@ export const Overview = () => {
     if (status === 'loading') return <p>Loading...</p>;
     if (status === 'error') return <p>Oops! Error</p>;
 
+    //single line and bar chart data
     const userData = {
         labels: UserData.map((data) => data.year),
         datasets: [
@@ -32,6 +33,7 @@ export const Overview = () => {
         ],
     };
 
+    //multiline and bar chart data
     const userDoubleData = {
         labels: UserData.map((data) => data.year),
         datasets: [
